@@ -1,25 +1,17 @@
-def reverseDigits(num) :
-    rev = 0
-    while (num > 0) :
-        rev = rev * 10 + num % 10
-        num //= 10
-         
-    return rev
-def square(num) :
-    return (num * num)
-     
-def checkAdamNumber(num) :
-    a = square(num)
-    b = square(reverseDigits(num))
-         
-
-    if (a == reverseDigits(b)) :
-        return True
-    else :
-        return False
-num=int(input())
-if (checkAdamNumber(num)) :
-    print ("True")
-else :
-    print ("False")
- 
+n=int(input())
+s=0
+r=n*n
+while n>0:
+    rem=n%10
+    s=s*10+rem
+    n//=10
+r1=s*s
+s1=0
+while r1>0:
+    rem=r1%10
+    s1=s1*10+rem
+    r1//=10
+if(s1==r):
+    print("True")
+else:
+    print("False")
