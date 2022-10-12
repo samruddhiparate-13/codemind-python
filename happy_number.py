@@ -4,7 +4,7 @@ while n>0:
     r=n%10
     n=n//10
     s+=r**2
-    if n==0 and s>9:
+    if(s>9 and n==0):
         n=s
         s=0
 if s==1 or s==7:
